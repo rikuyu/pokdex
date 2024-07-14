@@ -1,7 +1,12 @@
 import 'package:dio/dio.dart';
+import 'package:pokedex/domain/model/pokemon_response.dart';
+import 'package:pokedex/foundation/utils/constants.dart';
 
-// 1-100までの一覧
-// https://pokeapi.co/api/v2/pokemon?offset=0&limit=100
 class RemoteDataSource {
-  final Dio? dio = Dio();
+  final Dio dio = Dio();
+
+  Future<PokemonResponse> getPokemonList() async {
+    final response = await dio.get(Constants.basePokemonUrl);
+    return PokemonResponse.fromJson(response.data);
+  }
 }

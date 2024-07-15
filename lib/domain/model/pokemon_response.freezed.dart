@@ -22,7 +22,7 @@ PokemonResponse _$PokemonResponseFromJson(Map<String, dynamic> json) {
 mixin _$PokemonResponse {
   String? get next => throw _privateConstructorUsedError;
   String? get previous => throw _privateConstructorUsedError;
-  List<AbstractPokemon> get results => throw _privateConstructorUsedError;
+  List<Pokemon> get results => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -36,7 +36,7 @@ abstract class $PokemonResponseCopyWith<$Res> {
           PokemonResponse value, $Res Function(PokemonResponse) then) =
       _$PokemonResponseCopyWithImpl<$Res, PokemonResponse>;
   @useResult
-  $Res call({String? next, String? previous, List<AbstractPokemon> results});
+  $Res call({String? next, String? previous, List<Pokemon> results});
 }
 
 /// @nodoc
@@ -68,7 +68,7 @@ class _$PokemonResponseCopyWithImpl<$Res, $Val extends PokemonResponse>
       results: null == results
           ? _value.results
           : results // ignore: cast_nullable_to_non_nullable
-              as List<AbstractPokemon>,
+              as List<Pokemon>,
     ) as $Val);
   }
 }
@@ -81,7 +81,7 @@ abstract class _$$PokemonResponseImplCopyWith<$Res>
       __$$PokemonResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String? next, String? previous, List<AbstractPokemon> results});
+  $Res call({String? next, String? previous, List<Pokemon> results});
 }
 
 /// @nodoc
@@ -111,7 +111,7 @@ class __$$PokemonResponseImplCopyWithImpl<$Res>
       results: null == results
           ? _value._results
           : results // ignore: cast_nullable_to_non_nullable
-              as List<AbstractPokemon>,
+              as List<Pokemon>,
     ));
   }
 }
@@ -120,7 +120,7 @@ class __$$PokemonResponseImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$PokemonResponseImpl implements _PokemonResponse {
   const _$PokemonResponseImpl(
-      {this.next, this.previous, required final List<AbstractPokemon> results})
+      {this.next, this.previous, required final List<Pokemon> results})
       : _results = results;
 
   factory _$PokemonResponseImpl.fromJson(Map<String, dynamic> json) =>
@@ -130,9 +130,9 @@ class _$PokemonResponseImpl implements _PokemonResponse {
   final String? next;
   @override
   final String? previous;
-  final List<AbstractPokemon> _results;
+  final List<Pokemon> _results;
   @override
-  List<AbstractPokemon> get results {
+  List<Pokemon> get results {
     if (_results is EqualUnmodifiableListView) return _results;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_results);
@@ -178,7 +178,7 @@ abstract class _PokemonResponse implements PokemonResponse {
   const factory _PokemonResponse(
       {final String? next,
       final String? previous,
-      required final List<AbstractPokemon> results}) = _$PokemonResponseImpl;
+      required final List<Pokemon> results}) = _$PokemonResponseImpl;
 
   factory _PokemonResponse.fromJson(Map<String, dynamic> json) =
       _$PokemonResponseImpl.fromJson;
@@ -188,7 +188,7 @@ abstract class _PokemonResponse implements PokemonResponse {
   @override
   String? get previous;
   @override
-  List<AbstractPokemon> get results;
+  List<Pokemon> get results;
   @override
   @JsonKey(ignore: true)
   _$$PokemonResponseImplCopyWith<_$PokemonResponseImpl> get copyWith =>

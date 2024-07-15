@@ -12,7 +12,7 @@ _$PokemonResponseImpl _$$PokemonResponseImplFromJson(
       next: json['next'] as String?,
       previous: json['previous'] as String?,
       results: (json['results'] as List<dynamic>)
-          .map((e) => AbstractPokemon.fromJson(e as Map<String, dynamic>))
+          .map((e) => Pokemon.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 

@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:pokedex/foundation/router/pokedex_rounter.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-void main() {
-  runApp(PokedexApp());
-}
+void main() => runApp(ProviderScope(child: PokedexApp()));
 
 class PokedexApp extends StatelessWidget {
   PokedexApp({super.key});

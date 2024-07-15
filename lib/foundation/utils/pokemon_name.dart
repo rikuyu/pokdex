@@ -259,9 +259,3 @@ enum PokemonName {
   final String number;
   final String nameJa;
 }
-
-extension PokemonNameExt on PokemonName {
-  String get pokemonName {
-    return name; // TODO
-  }
-}

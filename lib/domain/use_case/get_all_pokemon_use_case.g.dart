@@ -1,26 +1,27 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'get_pokemon_use_case.dart';
+part of 'get_all_pokemon_use_case.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$getPokemonUseCaseHash() => r'2266201acc55eaa1e1c789e4d8b022fa9e17e12a';
+String _$getAllPokemonUseCaseHash() =>
+    r'32b2856ee8be89e5498bf71832f9c6d37c566155';
 
-/// See also [getPokemonUseCase].
-@ProviderFor(getPokemonUseCase)
-final getPokemonUseCaseProvider =
-    AutoDisposeProvider<GetPokemonUseCase>.internal(
-  getPokemonUseCase,
-  name: r'getPokemonUseCaseProvider',
+/// See also [getAllPokemonUseCase].
+@ProviderFor(getAllPokemonUseCase)
+final getAllPokemonUseCaseProvider =
+    AutoDisposeProvider<GetAllPokemonUseCase>.internal(
+  getAllPokemonUseCase,
+  name: r'getAllPokemonUseCaseProvider',
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
       ? null
-      : _$getPokemonUseCaseHash,
+      : _$getAllPokemonUseCaseHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
 
-typedef GetPokemonUseCaseRef = AutoDisposeProviderRef<GetPokemonUseCase>;
+typedef GetAllPokemonUseCaseRef = AutoDisposeProviderRef<GetAllPokemonUseCase>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

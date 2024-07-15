@@ -10,9 +10,11 @@ dependencies:
   flutter:
     sdk: flutter
 
-  # presentation
-  flutter_riverpod: ^2.5.1
   cupertino_icons: ^1.0.2
+
+  # riverpod
+  hooks_riverpod: ^2.5.1
+  riverpod_annotation: ^2.3.5
   
   # localization
   flutter_localizations:
@@ -37,6 +39,9 @@ dev_dependencies:
 
   # build runner
   build_runner: ^2.4.11
+  
+  # riverpod
+  riverpod_generator: ^2.4.0
 
   # model
   freezed: ^2.5.2

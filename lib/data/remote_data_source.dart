@@ -1,12 +1,17 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:pokedex/domain/model/pokemon.dart';
 import 'package:pokedex/domain/model/pokemon_response.dart';
 import 'package:pokedex/foundation/utils/constants.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-final remoteDataSource = Provider((ref) => RemoteDataSource());
+part 'remote_data_source.g.dart';
+
+@Riverpod(keepAlive: true)
+RemoteDataSource remoteDataSource(RemoteDataSourceRef ref) => RemoteDataSource();
 
 class RemoteDataSource {
+  RemoteDataSource();
+
   final Dio dio = Dio();
 
   String? nextUrl;

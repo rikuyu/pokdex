@@ -5,6 +5,20 @@ import 'package:pokedex/foundation/router/pokedex_rounter.gr.dart';
 class PokedexRounter extends $PokedexRounter {
   @override
   List<AutoRoute> get routes => [
-        AutoRoute(page: AllPokemonRoute.page, initial: true),
+        AutoRoute(
+          initial: true,
+          page: MainRoute.page,
+          children: [
+            AutoRoute(
+              page: AllPokemonRoute.page,
+            ),
+            AutoRoute(
+              page: AllBerryRoute.page,
+            ),
+            AutoRoute(
+              page: AllItemRoute.page,
+            ),
+          ],
+        ),
       ];
 }

@@ -1,4 +1,7 @@
 {
   "@@locale": "ja",
-  "appTitle": "Pokedex"
+  "appTitle": "Pokedex",
+  "pokemon": "ポケモン",
+  "berry": "きのみ",
+  "item": "アイテム"
 }

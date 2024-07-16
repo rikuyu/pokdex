@@ -4,6 +4,7 @@ import 'package:pokedex/domain/model/pokemon.dart';
 import 'package:pokedex/foundation/pokedex_color.dart';
 import 'package:pokedex/foundation/utils/constants.dart';
 import 'package:pokedex/foundation/utils/utils.dart';
+import 'package:pokedex/gen/assets.gen.dart';
 
 class AllPokemonItem extends StatelessWidget {
   const AllPokemonItem(this.p, {super.key});
@@ -37,7 +38,12 @@ class AllPokemonItem extends StatelessWidget {
                     color: PokedexColor.onPrimaryContainer,
                     fontWeight: FontWeight.bold,
                   )),
-              Expanded(child: CachedNetworkImage(imageUrl: image)),
+              Expanded(
+                  child: CachedNetworkImage(
+                imageUrl: image,
+                placeholder: (_0, _1) => Assets.monsterBall.svg(),
+                errorWidget: (_0, _1, _2) => const Icon(Icons.error),
+              )),
               Text(getPokemonNameJa(formatId(id)),
                   style: const TextStyle(
                     color: PokedexColor.black90Alpha,

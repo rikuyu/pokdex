@@ -8,4 +8,9 @@ part 'all_pokemon_state.g.dart';
 class AllPokemonState extends _$AllPokemonState {
   @override
   Future<List<Pokemon>> build() => ref.watch(getAllPokemonUseCaseProvider).getPokemonList();
+
+  Future<void> loadMore() async {
+    final pokemons = await ref.watch(getAllPokemonUseCaseProvider).getPokemonList();
+    // state = [...state., pokemons];
+  }
 }

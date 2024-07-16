@@ -17,7 +17,7 @@ class RemoteDataSource {
   String? nextUrl;
 
   Future<List<Pokemon>> getPokemonList() async {
-    final url = nextUrl ?? "${Constants.basePokemonUrl}/?offset=0&limit=120";
+    final url = nextUrl ?? "${Constants.basePokemonUrl}/?offset=0&limit=150";
     final response = await dio.get(url);
     final data = PokemonResponse.fromJson(response.data);
     nextUrl = data.next;

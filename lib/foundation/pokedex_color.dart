@@ -6,6 +6,8 @@ class PokedexColor {
   static const primaryContainer = Color(0xffd53b47);
   static const onPrimaryContainer = white100;
 
+  static const backgroundColor = Color(0xffedf3fc);
+
   // black
   static const black100 = Color(0xff000000);
   static const black90Alpha = Color(0xe6000000);

@@ -4,8 +4,6 @@ class Constants {
   static const baseUrl = "https://pokeapi.co/api/v2";
   static const imageBaseUrl = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites";
 
-  final _berryInitialIndex = 126;
-
   static const basePokemonUrl = "$baseUrl/pokemon";
 
   static const baseItemUrl = "$baseUrl/item";

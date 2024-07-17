@@ -3,5 +3,7 @@
   "appTitle": "Pokedex",
   "pokemon": "ポケモン",
   "berry": "きのみ",
-  "item": "アイテム"
+  "berryTitle": "きのみずかん",
+  "item": "アイテム",
+  "itemTitle": "アイテムずかん"
 }

@@ -1,5 +1,6 @@
 import 'package:pokedex/domain/model/data_unit.dart';
-import 'package:pokedex/foundation/utils/pokemon_name.dart';
+import 'package:pokedex/foundation/utils/berry_data.dart';
+import 'package:pokedex/foundation/utils/pokemon_data.dart';
 
 typedef Pokemon = DataUnit;
 typedef Berry = DataUnit;
@@ -18,8 +19,16 @@ String formatId(int id) {
 
 String getPokemonNameJa(String id) {
   String name = "unknown";
-  PokemonName.values.forEach((p) {
-    if (p.number == id) name = p.nameJa;
-  });
+  for (var value in PokemonData.values) {
+    if (value.number == id) name = value.nameJa;
+  }
   return name;
+}
+
+BerryData? getBerryData(Berry b) {
+  BerryData? berry;
+  for (var value in BerryData.values) {
+    if (b.name.replaceFirst("-", "") == value.name.toLowerCase()) berry = value;
+  }
+  return berry;
 }

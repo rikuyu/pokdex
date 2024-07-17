@@ -40,8 +40,8 @@ class AllPokemonItem extends StatelessWidget {
               Expanded(
                   child: CachedNetworkImage(
                 imageUrl: image,
-                placeholder: (_0, _1) => Assets.monsterBall.svg(),
-                errorWidget: (_0, _1, _2) => const Icon(Icons.error),
+                placeholder: (_, __) => Assets.monsterBall.svg(),
+                errorWidget: (_, __, ___) => const Icon(Icons.error),
               )),
               Text(getPokemonNameJa(formatId(id)),
                   style: const TextStyle(

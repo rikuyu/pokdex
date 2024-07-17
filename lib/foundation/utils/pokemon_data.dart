@@ -1,5 +1,5 @@
 // https://eigoiseigo.com/pokemon-name/
-enum PokemonName {
+enum PokemonData {
   // 第1世代（赤・緑）
   bulbasaur("#001", "フシギダネ"),
   ivysaur("#002", "フシギソウ"),
@@ -655,7 +655,7 @@ enum PokemonName {
   meloetta("#648", "メロエッタ"),
   genesect("#649", "ゲノセクト");
 
-  const PokemonName(this.number, this.nameJa);
+  const PokemonData(this.number, this.nameJa);
 
   final String number;
   final String nameJa;

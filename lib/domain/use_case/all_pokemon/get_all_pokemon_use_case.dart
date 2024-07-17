@@ -1,5 +1,5 @@
 import 'package:pokedex/data/remote_data_source.dart';
-import 'package:pokedex/domain/model/pokemon.dart';
+import 'package:pokedex/foundation/utils/utils.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'get_all_pokemon_use_case.g.dart';

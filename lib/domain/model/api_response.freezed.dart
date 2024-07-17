@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'pokemon_response.dart';
+part of 'api_response.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,35 +14,35 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
-PokemonResponse _$PokemonResponseFromJson(Map<String, dynamic> json) {
-  return _PokemonResponse.fromJson(json);
+ApiResponse _$ApiResponseFromJson(Map<String, dynamic> json) {
+  return _ApiResponse.fromJson(json);
 }
 
 /// @nodoc
-mixin _$PokemonResponse {
+mixin _$ApiResponse {
   String? get next => throw _privateConstructorUsedError;
   String? get previous => throw _privateConstructorUsedError;
-  List<Pokemon> get results => throw _privateConstructorUsedError;
+  List<DataUnit> get results => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $PokemonResponseCopyWith<PokemonResponse> get copyWith =>
+  $ApiResponseCopyWith<ApiResponse> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $PokemonResponseCopyWith<$Res> {
-  factory $PokemonResponseCopyWith(
-          PokemonResponse value, $Res Function(PokemonResponse) then) =
-      _$PokemonResponseCopyWithImpl<$Res, PokemonResponse>;
+abstract class $ApiResponseCopyWith<$Res> {
+  factory $ApiResponseCopyWith(
+          ApiResponse value, $Res Function(ApiResponse) then) =
+      _$ApiResponseCopyWithImpl<$Res, ApiResponse>;
   @useResult
-  $Res call({String? next, String? previous, List<Pokemon> results});
+  $Res call({String? next, String? previous, List<DataUnit> results});
 }
 
 /// @nodoc
-class _$PokemonResponseCopyWithImpl<$Res, $Val extends PokemonResponse>
-    implements $PokemonResponseCopyWith<$Res> {
-  _$PokemonResponseCopyWithImpl(this._value, this._then);
+class _$ApiResponseCopyWithImpl<$Res, $Val extends ApiResponse>
+    implements $ApiResponseCopyWith<$Res> {
+  _$ApiResponseCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -68,28 +68,28 @@ class _$PokemonResponseCopyWithImpl<$Res, $Val extends PokemonResponse>
       results: null == results
           ? _value.results
           : results // ignore: cast_nullable_to_non_nullable
-              as List<Pokemon>,
+              as List<DataUnit>,
     ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$PokemonResponseImplCopyWith<$Res>
-    implements $PokemonResponseCopyWith<$Res> {
-  factory _$$PokemonResponseImplCopyWith(_$PokemonResponseImpl value,
-          $Res Function(_$PokemonResponseImpl) then) =
-      __$$PokemonResponseImplCopyWithImpl<$Res>;
+abstract class _$$ApiResponseImplCopyWith<$Res>
+    implements $ApiResponseCopyWith<$Res> {
+  factory _$$ApiResponseImplCopyWith(
+          _$ApiResponseImpl value, $Res Function(_$ApiResponseImpl) then) =
+      __$$ApiResponseImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String? next, String? previous, List<Pokemon> results});
+  $Res call({String? next, String? previous, List<DataUnit> results});
 }
 
 /// @nodoc
-class __$$PokemonResponseImplCopyWithImpl<$Res>
-    extends _$PokemonResponseCopyWithImpl<$Res, _$PokemonResponseImpl>
-    implements _$$PokemonResponseImplCopyWith<$Res> {
-  __$$PokemonResponseImplCopyWithImpl(
-      _$PokemonResponseImpl _value, $Res Function(_$PokemonResponseImpl) _then)
+class __$$ApiResponseImplCopyWithImpl<$Res>
+    extends _$ApiResponseCopyWithImpl<$Res, _$ApiResponseImpl>
+    implements _$$ApiResponseImplCopyWith<$Res> {
+  __$$ApiResponseImplCopyWithImpl(
+      _$ApiResponseImpl _value, $Res Function(_$ApiResponseImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -99,7 +99,7 @@ class __$$PokemonResponseImplCopyWithImpl<$Res>
     Object? previous = freezed,
     Object? results = null,
   }) {
-    return _then(_$PokemonResponseImpl(
+    return _then(_$ApiResponseImpl(
       next: freezed == next
           ? _value.next
           : next // ignore: cast_nullable_to_non_nullable
@@ -111,28 +111,28 @@ class __$$PokemonResponseImplCopyWithImpl<$Res>
       results: null == results
           ? _value._results
           : results // ignore: cast_nullable_to_non_nullable
-              as List<Pokemon>,
+              as List<DataUnit>,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$PokemonResponseImpl implements _PokemonResponse {
-  const _$PokemonResponseImpl(
-      {this.next, this.previous, required final List<Pokemon> results})
+class _$ApiResponseImpl implements _ApiResponse {
+  const _$ApiResponseImpl(
+      {this.next, this.previous, required final List<DataUnit> results})
       : _results = results;
 
-  factory _$PokemonResponseImpl.fromJson(Map<String, dynamic> json) =>
-      _$$PokemonResponseImplFromJson(json);
+  factory _$ApiResponseImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ApiResponseImplFromJson(json);
 
   @override
   final String? next;
   @override
   final String? previous;
-  final List<Pokemon> _results;
+  final List<DataUnit> _results;
   @override
-  List<Pokemon> get results {
+  List<DataUnit> get results {
     if (_results is EqualUnmodifiableListView) return _results;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_results);
@@ -140,14 +140,14 @@ class _$PokemonResponseImpl implements _PokemonResponse {
 
   @override
   String toString() {
-    return 'PokemonResponse(next: $next, previous: $previous, results: $results)';
+    return 'ApiResponse(next: $next, previous: $previous, results: $results)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$PokemonResponseImpl &&
+            other is _$ApiResponseImpl &&
             (identical(other.next, next) || other.next == next) &&
             (identical(other.previous, previous) ||
                 other.previous == previous) &&
@@ -162,35 +162,34 @@ class _$PokemonResponseImpl implements _PokemonResponse {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$PokemonResponseImplCopyWith<_$PokemonResponseImpl> get copyWith =>
-      __$$PokemonResponseImplCopyWithImpl<_$PokemonResponseImpl>(
-          this, _$identity);
+  _$$ApiResponseImplCopyWith<_$ApiResponseImpl> get copyWith =>
+      __$$ApiResponseImplCopyWithImpl<_$ApiResponseImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$PokemonResponseImplToJson(
+    return _$$ApiResponseImplToJson(
       this,
     );
   }
 }
 
-abstract class _PokemonResponse implements PokemonResponse {
-  const factory _PokemonResponse(
+abstract class _ApiResponse implements ApiResponse {
+  const factory _ApiResponse(
       {final String? next,
       final String? previous,
-      required final List<Pokemon> results}) = _$PokemonResponseImpl;
+      required final List<DataUnit> results}) = _$ApiResponseImpl;
 
-  factory _PokemonResponse.fromJson(Map<String, dynamic> json) =
-      _$PokemonResponseImpl.fromJson;
+  factory _ApiResponse.fromJson(Map<String, dynamic> json) =
+      _$ApiResponseImpl.fromJson;
 
   @override
   String? get next;
   @override
   String? get previous;
   @override
-  List<Pokemon> get results;
+  List<DataUnit> get results;
   @override
   @JsonKey(ignore: true)
-  _$$PokemonResponseImplCopyWith<_$PokemonResponseImpl> get copyWith =>
+  _$$ApiResponseImplCopyWith<_$ApiResponseImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

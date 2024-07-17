@@ -2,11 +2,11 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:pokedex/foundation/pokedex_color.dart';
+import 'package:pokedex/foundation/utils/utils.dart';
 import 'package:pokedex/foundation/widgets/pokedex_scaffold.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pokedex/presentation/all_pokemon/all_pokemon_item.dart';
-import 'package:pokedex/presentation/all_pokemon/all_pokemon_state.dart';
-import 'package:pokedex/domain/model/pokemon.dart';
+import 'package:pokedex/presentation/screen/all_pokemon/all_pokemon_item.dart';
+import 'package:pokedex/presentation/state/all_pokemon/all_pokemon_state.dart';
 
 @RoutePage()
 class AllPokemonScreen extends ConsumerWidget {
@@ -40,7 +40,7 @@ class AllPokemonScreen extends ConsumerWidget {
               ),
             ),
             const SliverPadding(
-              padding: const EdgeInsets.symmetric(vertical: 12.0),
+              padding: EdgeInsets.symmetric(vertical: 12.0),
               sliver: SliverToBoxAdapter(
                   child: Center(child: CircularProgressIndicator(color: PokedexColor.primaryContainer))),
             ),

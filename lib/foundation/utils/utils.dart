@@ -1,4 +1,8 @@
+import 'package:pokedex/domain/model/data_unit.dart';
 import 'package:pokedex/foundation/utils/pokemon_name.dart';
+
+typedef Pokemon = DataUnit;
+typedef Berry = DataUnit;
 
 int extractIdFromUrl(String url) {
   List<String> parts = url.split('/');

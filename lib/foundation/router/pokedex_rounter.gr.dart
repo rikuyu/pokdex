@@ -9,11 +9,13 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i5;
-import 'package:pokedex/presentation/all_berry/all_berry_screen.dart' as _i1;
-import 'package:pokedex/presentation/all_item/all_item_screen.dart' as _i2;
-import 'package:pokedex/presentation/all_pokemon/all_pokemon_screen.dart'
-    as _i3;
 import 'package:pokedex/presentation/main_screen.dart' as _i4;
+import 'package:pokedex/presentation/screen/all_berry/all_berry_screen.dart'
+    as _i1;
+import 'package:pokedex/presentation/screen/all_item/all_item_screen.dart'
+    as _i2;
+import 'package:pokedex/presentation/screen/all_pokemon/all_pokemon_screen.dart'
+    as _i3;
 
 abstract class $PokedexRounter extends _i5.RootStackRouter {
   $PokedexRounter({super.navigatorKey});

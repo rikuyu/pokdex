@@ -1,18 +1,18 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'pokemon.dart';
+part of 'data_unit.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$PokemonImpl _$$PokemonImplFromJson(Map<String, dynamic> json) =>
-    _$PokemonImpl(
+_$DataUnitImpl _$$DataUnitImplFromJson(Map<String, dynamic> json) =>
+    _$DataUnitImpl(
       name: json['name'] as String,
       url: json['url'] as String,
     );
 
-Map<String, dynamic> _$$PokemonImplToJson(_$PokemonImpl instance) =>
+Map<String, dynamic> _$$DataUnitImplToJson(_$DataUnitImpl instance) =>
     <String, dynamic>{
       'name': instance.name,
       'url': instance.url,

@@ -20,7 +20,7 @@ class RemoteDataSource {
   int itemInitialCount = 0;
 
   Future<List<Pokemon>> getPokemonList() async {
-    final url = nextPokemonUrl ?? "${Constants.pokemonUrl}?offset=0&limit=150";
+    final url = nextPokemonUrl ?? Constants.getPagingUrl(Constants.pokemonUrl, 0, 150);
     final response = await dio.get(url);
     final data = ApiResponse.fromJson(response.data);
     nextPokemonUrl = data.next;
@@ -35,8 +35,8 @@ class RemoteDataSource {
 
   Future<List<Item>> getAllItems() async {
     final url = switch (itemInitialCount) {
-      0 => "${Constants.itemUrl}?offset=0&limit=125",
-      1 => "${Constants.itemUrl}?offset=189&limit=123",
+      0 => Constants.getPagingUrl(Constants.itemUrl, 0, 125),
+      1 => Constants.getPagingUrl(Constants.itemUrl, 189, 123),
       _ => nextItemUrl,
     };
     if (url == null) {

@@ -11,14 +11,7 @@ int extractIdFromUrl(String url) {
   return int.parse(parts[parts.length - 2]);
 }
 
-String formatId(int id) {
-  if (id < 1 || id > 999) {
-    throw ArgumentError('The id must be within the range of 1 to 999.');
-  }
-  return '#${id.toString().padLeft(3, '0')}';
-}
-
-String getPokemonNameJa(String id) {
+String getPokemonNameJa(int id) {
   String name = "unknown";
   for (var value in PokemonData.values) {
     if (value.number == id) name = value.nameJa;

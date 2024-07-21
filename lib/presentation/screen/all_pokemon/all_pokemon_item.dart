@@ -32,7 +32,7 @@ class AllPokemonItem extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Text(formatId(id),
+              Text("#$id",
                   style: const TextStyle(
                     color: PokedexColor.onPrimaryContainer,
                     fontWeight: FontWeight.bold,
@@ -43,7 +43,7 @@ class AllPokemonItem extends StatelessWidget {
                 placeholder: (_, __) => Assets.monsterBall.svg(),
                 errorWidget: (_, __, ___) => const Icon(Icons.error),
               )),
-              Text(getPokemonNameJa(formatId(id)),
+              Text(getPokemonNameJa(id),
                   style: const TextStyle(
                     color: PokedexColor.black90Alpha,
                     fontSize: 12.0,

@@ -18,7 +18,7 @@ class AllPokemonScreen extends ConsumerWidget {
     AsyncValue<List<Pokemon>> state = ref.watch(allPokemonStateProvider);
 
     return PokedexScaffold(
-        title: l10n.appTitle,
+        title: l10n.pokemonTitle,
         body: state.when(
             loading: () => const Center(child: CircularProgressIndicator(color: PokedexColor.primaryContainer)),
             error: (_, __) => const Center(child: Icon(Icons.error)),

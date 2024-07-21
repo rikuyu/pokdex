@@ -2,6 +2,7 @@
   "@@locale": "ja",
   "appTitle": "Pokedex",
   "pokemon": "ポケモン",
+  "pokemonTitle": "ポケモンずかん",
   "berry": "きのみ",
   "berryTitle": "きのみずかん",
   "item": "アイテム",

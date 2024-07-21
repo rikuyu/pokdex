@@ -14,19 +14,38 @@ class RemoteDataSource {
 
   final Dio dio = Dio();
 
-  String? nextUrl;
+  String? nextPokemonUrl;
+  String? nextItemUrl;
+
+  int itemInitialCount = 0;
 
   Future<List<Pokemon>> getPokemonList() async {
-    final url = nextUrl ?? "${Constants.pokemonUrl}/?offset=0&limit=150";
+    final url = nextPokemonUrl ?? "${Constants.pokemonUrl}?offset=0&limit=150";
     final response = await dio.get(url);
     final data = ApiResponse.fromJson(response.data);
-    nextUrl = data.next;
+    nextPokemonUrl = data.next;
     return data.results;
   }
 
   Future<List<Berry>> getAllBerries() async {
     final response = await dio.get(Constants.berryUrl);
     final data = ApiResponse.fromJson(response.data);
+    return data.results;
+  }
+
+  Future<List<Item>> getAllItems() async {
+    final url = switch (itemInitialCount) {
+      0 => "${Constants.itemUrl}?offset=0&limit=125",
+      1 => "${Constants.itemUrl}?offset=189&limit=123",
+      _ => nextItemUrl,
+    };
+    if (url == null) {
+      return [];
+    }
+    final response = await dio.get(url);
+    final data = ApiResponse.fromJson(response.data);
+    nextItemUrl = data.next;
+    itemInitialCount++;
     return data.results;
   }
 }

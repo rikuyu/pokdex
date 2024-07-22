@@ -9,15 +9,12 @@ class PokedexRounter extends $PokedexRounter {
           initial: true,
           page: MainRoute.page,
           children: [
-            AutoRoute(
-              page: AllPokemonRoute.page,
-            ),
-            AutoRoute(
-              page: AllBerryRoute.page,
-            ),
-            AutoRoute(
-              page: AllItemRoute.page,
-            ),
+            AutoRoute(page: AllPokemonRounterPage.page, children: [
+              AutoRoute(page: AllPokemonRoute.page, initial: true),
+              AutoRoute(page: PokemonDetailRoute.page),
+            ]),
+            AutoRoute(page: AllBerryRoute.page),
+            AutoRoute(page: AllItemRoute.page),
           ],
         ),
       ];

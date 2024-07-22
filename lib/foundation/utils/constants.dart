@@ -12,6 +12,8 @@ class Constants {
 
   static String getPokemonImage(int index) => "$imageBaseUrl/pokemon/$index.png";
 
+  static String getPokemonDetailUrl(int index) => "$imageBaseUrl/pokemon/$index";
+
   static String getItemImage(String itemName) => "$imageBaseUrl/items/$itemName.png";
 
   static String getPagingUrl(String baseUrl, int offset, int limit) => "$baseUrl?offset=$offset&limit=$limit";

@@ -8,11 +8,14 @@ part of 'pokemon_detail.dart';
 
 _$PokemonDetailImpl _$$PokemonDetailImplFromJson(Map<String, dynamic> json) =>
     _$PokemonDetailImpl(
-      id: (json['id'] as num).toInt(),
-      height: (json['height'] as num).toInt(),
-      weight: (json['weight'] as num).toInt(),
-      types: (json['types'] as List<dynamic>)
+      (json['id'] as num).toInt(),
+      (json['height'] as num).toInt(),
+      (json['weight'] as num).toInt(),
+      (json['types'] as List<dynamic>)
           .map((e) => PokemonType.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      (json['stats'] as List<dynamic>)
+          .map((e) => PokemonAbility.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
@@ -22,4 +25,5 @@ Map<String, dynamic> _$$PokemonDetailImplToJson(_$PokemonDetailImpl instance) =>
       'height': instance.height,
       'weight': instance.weight,
       'types': instance.types,
+      'stats': instance.abilities,
     };

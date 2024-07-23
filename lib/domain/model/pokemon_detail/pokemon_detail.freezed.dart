@@ -24,6 +24,8 @@ mixin _$PokemonDetail {
   int get height => throw _privateConstructorUsedError;
   int get weight => throw _privateConstructorUsedError;
   List<PokemonType> get types => throw _privateConstructorUsedError;
+  @JsonKey(name: "stats")
+  List<PokemonAbility> get abilities => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -37,7 +39,12 @@ abstract class $PokemonDetailCopyWith<$Res> {
           PokemonDetail value, $Res Function(PokemonDetail) then) =
       _$PokemonDetailCopyWithImpl<$Res, PokemonDetail>;
   @useResult
-  $Res call({int id, int height, int weight, List<PokemonType> types});
+  $Res call(
+      {int id,
+      int height,
+      int weight,
+      List<PokemonType> types,
+      @JsonKey(name: "stats") List<PokemonAbility> abilities});
 }
 
 /// @nodoc
@@ -57,6 +64,7 @@ class _$PokemonDetailCopyWithImpl<$Res, $Val extends PokemonDetail>
     Object? height = null,
     Object? weight = null,
     Object? types = null,
+    Object? abilities = null,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -75,6 +83,10 @@ class _$PokemonDetailCopyWithImpl<$Res, $Val extends PokemonDetail>
           ? _value.types
           : types // ignore: cast_nullable_to_non_nullable
               as List<PokemonType>,
+      abilities: null == abilities
+          ? _value.abilities
+          : abilities // ignore: cast_nullable_to_non_nullable
+              as List<PokemonAbility>,
     ) as $Val);
   }
 }
@@ -87,7 +99,12 @@ abstract class _$$PokemonDetailImplCopyWith<$Res>
       __$$PokemonDetailImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int id, int height, int weight, List<PokemonType> types});
+  $Res call(
+      {int id,
+      int height,
+      int weight,
+      List<PokemonType> types,
+      @JsonKey(name: "stats") List<PokemonAbility> abilities});
 }
 
 /// @nodoc
@@ -105,24 +122,29 @@ class __$$PokemonDetailImplCopyWithImpl<$Res>
     Object? height = null,
     Object? weight = null,
     Object? types = null,
+    Object? abilities = null,
   }) {
     return _then(_$PokemonDetailImpl(
-      id: null == id
+      null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as int,
-      height: null == height
+      null == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
               as int,
-      weight: null == weight
+      null == weight
           ? _value.weight
           : weight // ignore: cast_nullable_to_non_nullable
               as int,
-      types: null == types
+      null == types
           ? _value._types
           : types // ignore: cast_nullable_to_non_nullable
               as List<PokemonType>,
+      null == abilities
+          ? _value._abilities
+          : abilities // ignore: cast_nullable_to_non_nullable
+              as List<PokemonAbility>,
     ));
   }
 }
@@ -131,11 +153,13 @@ class __$$PokemonDetailImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$PokemonDetailImpl implements _PokemonDetail {
   const _$PokemonDetailImpl(
-      {required this.id,
-      required this.height,
-      required this.weight,
-      required final List<PokemonType> types})
-      : _types = types;
+      this.id,
+      this.height,
+      this.weight,
+      final List<PokemonType> types,
+      @JsonKey(name: "stats") final List<PokemonAbility> abilities)
+      : _types = types,
+        _abilities = abilities;
 
   factory _$PokemonDetailImpl.fromJson(Map<String, dynamic> json) =>
       _$$PokemonDetailImplFromJson(json);
@@ -154,9 +178,18 @@ class _$PokemonDetailImpl implements _PokemonDetail {
     return EqualUnmodifiableListView(_types);
   }
 
+  final List<PokemonAbility> _abilities;
+  @override
+  @JsonKey(name: "stats")
+  List<PokemonAbility> get abilities {
+    if (_abilities is EqualUnmodifiableListView) return _abilities;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_abilities);
+  }
+
   @override
   String toString() {
-    return 'PokemonDetail(id: $id, height: $height, weight: $weight, types: $types)';
+    return 'PokemonDetail(id: $id, height: $height, weight: $weight, types: $types, abilities: $abilities)';
   }
 
   @override
@@ -167,13 +200,20 @@ class _$PokemonDetailImpl implements _PokemonDetail {
             (identical(other.id, id) || other.id == id) &&
             (identical(other.height, height) || other.height == height) &&
             (identical(other.weight, weight) || other.weight == weight) &&
-            const DeepCollectionEquality().equals(other._types, _types));
+            const DeepCollectionEquality().equals(other._types, _types) &&
+            const DeepCollectionEquality()
+                .equals(other._abilities, _abilities));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, height, weight,
-      const DeepCollectionEquality().hash(_types));
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      height,
+      weight,
+      const DeepCollectionEquality().hash(_types),
+      const DeepCollectionEquality().hash(_abilities));
 
   @JsonKey(ignore: true)
   @override
@@ -191,10 +231,12 @@ class _$PokemonDetailImpl implements _PokemonDetail {
 
 abstract class _PokemonDetail implements PokemonDetail {
   const factory _PokemonDetail(
-      {required final int id,
-      required final int height,
-      required final int weight,
-      required final List<PokemonType> types}) = _$PokemonDetailImpl;
+          final int id,
+          final int height,
+          final int weight,
+          final List<PokemonType> types,
+          @JsonKey(name: "stats") final List<PokemonAbility> abilities) =
+      _$PokemonDetailImpl;
 
   factory _PokemonDetail.fromJson(Map<String, dynamic> json) =
       _$PokemonDetailImpl.fromJson;
@@ -207,6 +249,9 @@ abstract class _PokemonDetail implements PokemonDetail {
   int get weight;
   @override
   List<PokemonType> get types;
+  @override
+  @JsonKey(name: "stats")
+  List<PokemonAbility> get abilities;
   @override
   @JsonKey(ignore: true)
   _$$PokemonDetailImplCopyWith<_$PokemonDetailImpl> get copyWith =>

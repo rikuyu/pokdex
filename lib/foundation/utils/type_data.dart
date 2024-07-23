@@ -11,7 +11,7 @@ enum TypeData {
   ghost("ゴースト", Color(0xff705898)),
   steel("はがね", Color(0xff4d989e)),
   fire("ほのお", Color(0xfff08030)),
-  water("みず", Color(0xff5caddb)),
+  water("みず", Color(0xff47bafc)),
   grass("くさ", Color(0xff78c850)),
   electric("でんき", Color(0xfff8d030)),
   psychic("エスパー", Color(0xfff85888)),
@@ -22,8 +22,16 @@ enum TypeData {
   stellar("ステラ", Color(0xff7cc7b2)),
   unknown("不明", Color(0xffffffff));
 
-  final String name;
+  final String nameJa;
   final Color color;
 
-  const TypeData(this.name, this.color);
+  const TypeData(this.nameJa, this.color);
+}
+
+TypeData getTypeData(String typeEn) {
+  TypeData type = TypeData.unknown;
+  for (var value in TypeData.values) {
+    if (typeEn == value.name) type = value;
+  }
+  return type;
 }

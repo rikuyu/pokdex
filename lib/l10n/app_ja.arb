@@ -6,5 +6,10 @@
   "berry": "きのみ",
   "berryTitle": "きのみずかん",
   "item": "アイテム",
-  "itemTitle": "アイテムずかん"
+  "itemTitle": "アイテムずかん",
+  "heightLabel": "高さ",
+  "heightValue": "{h}m",
+  "weightLabel": "重さ",
+  "weightValue": "{w}kg",
+  "abilityLable": "能力値"
 }

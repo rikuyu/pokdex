@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pokedex/domain/model/pokemon_detail/pokemon_detail.dart';
 import 'package:pokedex/foundation/pokedex_color.dart';
+import 'package:pokedex/foundation/utils/type_data.dart';
 import 'package:pokedex/foundation/widgets/pokedex_scaffold.dart';
 import 'package:pokedex/presentation/screen/pokemon_detail/pokemon_detail_body.dart';
 import 'package:pokedex/presentation/state/pokemon_detail/pokemon_detail_state.dart';
@@ -17,11 +18,18 @@ class PokemonDetailScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     AsyncValue<PokemonDetail> state = ref.watch(pokemonDetailStateProvider(id));
-    return PokedexScaffold(
-        title: name,
-        body: state.when(
-            data: (detail) => PokemonDetailBody(detail),
-            error: (_, __) => const Center(child: Icon(Icons.error)),
-            loading: () => const Center(child: CircularProgressIndicator(color: PokedexColor.primaryContainer))));
+    return Container(
+        child: state.when(
+      error: (_, __) => const Center(child: Icon(Icons.error)),
+      loading: () => const Center(child: CircularProgressIndicator(color: PokedexColor.primaryContainer)),
+      data: (detail) {
+        final types = detail.types.map((t) => getTypeData(t.data.name)).toList();
+        return PokedexScaffold(
+            appBarColor: types.first.color,
+            title: name,
+            bodyColor: PokedexColor.backgroundColor,
+            body: PokemonDetailBody(detail));
+      },
+    ));
   }
 }

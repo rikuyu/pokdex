@@ -1,5 +1,4 @@
 import 'package:pokedex/domain/model/data_unit/data_unit.dart';
-import 'package:pokedex/foundation/utils/berry_data.dart';
 import 'package:pokedex/foundation/utils/pokemon_data.dart';
 
 typedef Pokemon = DataUnit;
@@ -17,12 +16,4 @@ String getPokemonNameJa(int id) {
     if (value.number == id) name = value.nameJa;
   }
   return name;
-}
-
-BerryData? getBerryData(Berry b) {
-  BerryData? berry;
-  for (var value in BerryData.values) {
-    if (b.name.replaceFirst("-", "") == value.name.toLowerCase()) berry = value;
-  }
-  return berry;
 }

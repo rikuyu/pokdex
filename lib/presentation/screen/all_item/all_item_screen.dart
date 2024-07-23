@@ -20,36 +20,34 @@ class AllItemScreen extends ConsumerWidget {
 
     return PokedexScaffold(
         title: l10n.itemTitle,
+        bodyColor: PokedexColor.backgroundColor,
         body: state.when(
             loading: () => const Center(child: CircularProgressIndicator(color: PokedexColor.primaryContainer)),
             error: (_, __) => const Center(child: Icon(Icons.error)),
             data: (pokemons) {
-              return Container(
-                color: PokedexColor.backgroundColor,
-                child: CustomScrollView(slivers: [
-                  SliverPadding(
-                    padding: const EdgeInsets.all(8.0),
-                    sliver: SliverGrid(
-                      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 4,
-                        mainAxisSpacing: 8,
-                        crossAxisSpacing: 8,
-                        childAspectRatio: 1,
-                      ),
-                      delegate: SliverChildBuilderDelegate((_, i) {
-                        final item = state.value?[i];
-                        if (item == null) return null;
-                        return AllItemWidget(i, Constants.getItemImage(item.name));
-                      }, childCount: state.value?.length ?? 0),
+              return CustomScrollView(slivers: [
+                SliverPadding(
+                  padding: const EdgeInsets.all(8.0),
+                  sliver: SliverGrid(
+                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 4,
+                      mainAxisSpacing: 8,
+                      crossAxisSpacing: 8,
+                      childAspectRatio: 1,
                     ),
+                    delegate: SliverChildBuilderDelegate((_, i) {
+                      final item = state.value?[i];
+                      if (item == null) return null;
+                      return AllItemWidget(i, Constants.getItemImage(item.name));
+                    }, childCount: state.value?.length ?? 0),
                   ),
-                  const SliverPadding(
-                    padding: EdgeInsets.symmetric(vertical: 12.0),
-                    sliver: SliverToBoxAdapter(
-                        child: Center(child: CircularProgressIndicator(color: PokedexColor.primaryContainer))),
-                  ),
-                ]),
-              );
+                ),
+                const SliverPadding(
+                  padding: EdgeInsets.symmetric(vertical: 12.0),
+                  sliver: SliverToBoxAdapter(
+                      child: Center(child: CircularProgressIndicator(color: PokedexColor.primaryContainer))),
+                ),
+              ]);
             }));
   }
 }

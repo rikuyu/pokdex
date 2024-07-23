@@ -1,3 +1,5 @@
+import 'package:pokedex/foundation/utils/utils.dart';
+
 enum BerryData {
   cheriBerry("クラボのみ", "まひ状態を回復"),
   chestoBerry("カゴのみ", "ねむり状態を回復"),
@@ -77,4 +79,12 @@ extension BerryDataExt on BerryData {
     final berryName = name.substring(0, name.length - 5);
     return "${berryName.toLowerCase()}-${berrySuffix.toLowerCase()}";
   }
+}
+
+BerryData? getBerryData(Berry b) {
+  BerryData? berry;
+  for (var value in BerryData.values) {
+    if (b.name.replaceFirst("-", "") == value.name.toLowerCase()) berry = value;
+  }
+  return berry;
 }

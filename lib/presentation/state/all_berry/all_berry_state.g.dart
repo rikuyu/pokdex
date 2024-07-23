@@ -6,7 +6,7 @@ part of 'all_berry_state.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$allBerryStateHash() => r'9c070ae2d3d5acd0a174044bfb305770623a72c2';
+String _$allBerryStateHash() => r'e3b3af94f87583bd2d40ef8fdf3922cf40ab941f';
 
 /// See also [allBerryState].
 @ProviderFor(allBerryState)

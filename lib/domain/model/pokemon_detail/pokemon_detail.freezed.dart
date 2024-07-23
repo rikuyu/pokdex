@@ -22,7 +22,7 @@ PokemonDetail _$PokemonDetailFromJson(Map<String, dynamic> json) {
 mixin _$PokemonDetail {
   int get id => throw _privateConstructorUsedError;
   int get height => throw _privateConstructorUsedError;
-  int get wight => throw _privateConstructorUsedError;
+  int get weight => throw _privateConstructorUsedError;
   List<PokemonType> get types => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -37,7 +37,7 @@ abstract class $PokemonDetailCopyWith<$Res> {
           PokemonDetail value, $Res Function(PokemonDetail) then) =
       _$PokemonDetailCopyWithImpl<$Res, PokemonDetail>;
   @useResult
-  $Res call({int id, int height, int wight, List<PokemonType> types});
+  $Res call({int id, int height, int weight, List<PokemonType> types});
 }
 
 /// @nodoc
@@ -55,7 +55,7 @@ class _$PokemonDetailCopyWithImpl<$Res, $Val extends PokemonDetail>
   $Res call({
     Object? id = null,
     Object? height = null,
-    Object? wight = null,
+    Object? weight = null,
     Object? types = null,
   }) {
     return _then(_value.copyWith(
@@ -67,9 +67,9 @@ class _$PokemonDetailCopyWithImpl<$Res, $Val extends PokemonDetail>
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
               as int,
-      wight: null == wight
-          ? _value.wight
-          : wight // ignore: cast_nullable_to_non_nullable
+      weight: null == weight
+          ? _value.weight
+          : weight // ignore: cast_nullable_to_non_nullable
               as int,
       types: null == types
           ? _value.types
@@ -87,7 +87,7 @@ abstract class _$$PokemonDetailImplCopyWith<$Res>
       __$$PokemonDetailImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({int id, int height, int wight, List<PokemonType> types});
+  $Res call({int id, int height, int weight, List<PokemonType> types});
 }
 
 /// @nodoc
@@ -103,7 +103,7 @@ class __$$PokemonDetailImplCopyWithImpl<$Res>
   $Res call({
     Object? id = null,
     Object? height = null,
-    Object? wight = null,
+    Object? weight = null,
     Object? types = null,
   }) {
     return _then(_$PokemonDetailImpl(
@@ -115,9 +115,9 @@ class __$$PokemonDetailImplCopyWithImpl<$Res>
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
               as int,
-      wight: null == wight
-          ? _value.wight
-          : wight // ignore: cast_nullable_to_non_nullable
+      weight: null == weight
+          ? _value.weight
+          : weight // ignore: cast_nullable_to_non_nullable
               as int,
       types: null == types
           ? _value._types
@@ -133,7 +133,7 @@ class _$PokemonDetailImpl implements _PokemonDetail {
   const _$PokemonDetailImpl(
       {required this.id,
       required this.height,
-      required this.wight,
+      required this.weight,
       required final List<PokemonType> types})
       : _types = types;
 
@@ -145,7 +145,7 @@ class _$PokemonDetailImpl implements _PokemonDetail {
   @override
   final int height;
   @override
-  final int wight;
+  final int weight;
   final List<PokemonType> _types;
   @override
   List<PokemonType> get types {
@@ -156,7 +156,7 @@ class _$PokemonDetailImpl implements _PokemonDetail {
 
   @override
   String toString() {
-    return 'PokemonDetail(id: $id, height: $height, wight: $wight, types: $types)';
+    return 'PokemonDetail(id: $id, height: $height, weight: $weight, types: $types)';
   }
 
   @override
@@ -166,13 +166,13 @@ class _$PokemonDetailImpl implements _PokemonDetail {
             other is _$PokemonDetailImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.height, height) || other.height == height) &&
-            (identical(other.wight, wight) || other.wight == wight) &&
+            (identical(other.weight, weight) || other.weight == weight) &&
             const DeepCollectionEquality().equals(other._types, _types));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, id, height, wight,
+  int get hashCode => Object.hash(runtimeType, id, height, weight,
       const DeepCollectionEquality().hash(_types));
 
   @JsonKey(ignore: true)
@@ -193,7 +193,7 @@ abstract class _PokemonDetail implements PokemonDetail {
   const factory _PokemonDetail(
       {required final int id,
       required final int height,
-      required final int wight,
+      required final int weight,
       required final List<PokemonType> types}) = _$PokemonDetailImpl;
 
   factory _PokemonDetail.fromJson(Map<String, dynamic> json) =
@@ -204,7 +204,7 @@ abstract class _PokemonDetail implements PokemonDetail {
   @override
   int get height;
   @override
-  int get wight;
+  int get weight;
   @override
   List<PokemonType> get types;
   @override

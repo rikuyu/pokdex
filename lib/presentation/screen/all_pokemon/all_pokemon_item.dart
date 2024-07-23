@@ -19,7 +19,7 @@ class AllPokemonItem extends StatelessWidget {
 
     return InkWell(
       onTap: () {
-        context.router.push(PokemonDetailRoute(id: id));
+        context.router.push(PokemonDetailRoute(id: id, name: getPokemonNameJa(id)));
       },
       child: Container(
           decoration: BoxDecoration(

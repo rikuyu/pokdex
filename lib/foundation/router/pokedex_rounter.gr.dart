@@ -63,6 +63,7 @@ abstract class $PokedexRounter extends _i7.RootStackRouter {
         routeData: routeData,
         child: _i6.PokemonDetailScreen(
           id: args.id,
+          name: args.name,
           key: args.key,
         ),
       );
@@ -145,12 +146,14 @@ class MainRoute extends _i7.PageRouteInfo<void> {
 class PokemonDetailRoute extends _i7.PageRouteInfo<PokemonDetailRouteArgs> {
   PokemonDetailRoute({
     required int id,
+    required String name,
     _i8.Key? key,
     List<_i7.PageRouteInfo>? children,
   }) : super(
           PokemonDetailRoute.name,
           args: PokemonDetailRouteArgs(
             id: id,
+            name: name,
             key: key,
           ),
           initialChildren: children,
@@ -165,15 +168,18 @@ class PokemonDetailRoute extends _i7.PageRouteInfo<PokemonDetailRouteArgs> {
 class PokemonDetailRouteArgs {
   const PokemonDetailRouteArgs({
     required this.id,
+    required this.name,
     this.key,
   });
 
   final int id;
 
+  final String name;
+
   final _i8.Key? key;
 
   @override
   String toString() {
-    return 'PokemonDetailRouteArgs{id: $id, key: $key}';
+    return 'PokemonDetailRouteArgs{id: $id, name: $name, key: $key}';
   }
 }

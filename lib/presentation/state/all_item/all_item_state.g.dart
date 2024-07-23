@@ -6,7 +6,7 @@ part of 'all_item_state.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$allItemStateHash() => r'cf6f0cb52dfbe240f8c738f0c0fe5617b105fa22';
+String _$allItemStateHash() => r'722da63696b04e99e41f8d788bc2d63e15f4e2df';
 
 /// See also [AllItemState].
 @ProviderFor(AllItemState)

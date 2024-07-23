@@ -25,29 +25,32 @@ class AllBerryScreen extends ConsumerWidget {
             error: (_, __) => const Center(child: Icon(Icons.error)),
             data: (berries) {
               final berresData = berries.map((b) => getBerryData(b)).whereType<BerryData>().toList();
-              return Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 12.0),
-                  child: ListView.separated(
-                      itemCount: berresData.length,
-                      separatorBuilder: (_, __) => const Divider(),
-                      itemBuilder: (c, i) {
-                        return ListTile(
-                          title: Text(
-                            berresData[i].nameJa,
-                            style: const TextStyle(fontSize: 14),
-                          ),
-                          subtitle: Text(berresData[i].description,
-                              style: const TextStyle(fontSize: 12, color: PokedexColor.black70Alpha)),
-                          leading: CachedNetworkImage(
-                            imageUrl: Constants.getItemImage(berresData[i].itemName),
-                            placeholder: (_, __) => const Icon(
-                              Icons.question_mark_outlined,
-                              color: PokedexColor.primaryContainer,
+              return Container(
+                color: PokedexColor.backgroundColor,
+                child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 12.0),
+                    child: ListView.separated(
+                        itemCount: berresData.length,
+                        separatorBuilder: (_, __) => const Divider(),
+                        itemBuilder: (c, i) {
+                          return ListTile(
+                            title: Text(
+                              berresData[i].nameJa,
+                              style: const TextStyle(fontSize: 14),
                             ),
-                            errorWidget: (_, __, ___) => const Icon(Icons.error),
-                          ),
-                        );
-                      }));
+                            subtitle: Text(berresData[i].description,
+                                style: const TextStyle(fontSize: 12, color: PokedexColor.black70Alpha)),
+                            leading: CachedNetworkImage(
+                              imageUrl: Constants.getItemImage(berresData[i].itemName),
+                              placeholder: (_, __) => const Icon(
+                                Icons.question_mark_outlined,
+                                color: PokedexColor.primaryContainer,
+                              ),
+                              errorWidget: (_, __, ___) => const Icon(Icons.error),
+                            ),
+                          );
+                        })),
+              );
             }));
   }
 }

@@ -12,7 +12,5 @@ class GetAllItemUseCase {
 
   final RemoteDataSource remoteDataSource;
 
-  Future<List<Item>> getAllItems() async {
-    return await remoteDataSource.getAllItems();
-  }
+  Future<List<Item>> call() => remoteDataSource.getAllItems();
 }

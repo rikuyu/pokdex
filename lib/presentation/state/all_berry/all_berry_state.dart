@@ -5,4 +5,4 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 part 'all_berry_state.g.dart';
 
 @riverpod
-Future<List<Berry>> allBerryState(AllBerryStateRef ref) => ref.watch(getAllBerryUseCaseProvider).getAllBerries();
+Future<List<Berry>> allBerryState(AllBerryStateRef ref) => ref.watch(getAllBerryUseCaseProvider).call();

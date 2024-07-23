@@ -7,5 +7,5 @@ part 'all_item_state.g.dart';
 @riverpod
 class AllItemState extends _$AllItemState {
   @override
-  Future<List<Item>> build() => ref.watch(getAllItemUseCaseProvider).getAllItems();
+  Future<List<Item>> build() => ref.watch(getAllItemUseCaseProvider).call();
 }

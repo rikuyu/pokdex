@@ -13,7 +13,5 @@ class GetAllPokemonUseCase {
 
   final RemoteDataSource remoteDataSource;
 
-  Future<List<Pokemon>> getPokemonList() async {
-    return await remoteDataSource.getPokemonList();
-  }
+  Future<List<Pokemon>> call() => remoteDataSource.getPokemonList();
 }

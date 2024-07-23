@@ -13,7 +13,5 @@ class GetAllBerryUseCase {
 
   final RemoteDataSource remoteDataSource;
 
-  Future<List<Berry>> getAllBerries() async {
-    return await remoteDataSource.getAllBerries();
-  }
+  Future<List<Berry>> call() => remoteDataSource.getAllBerries();
 }

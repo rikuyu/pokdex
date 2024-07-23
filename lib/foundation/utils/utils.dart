@@ -1,4 +1,4 @@
-import 'package:pokedex/domain/model/data_unit.dart';
+import 'package:pokedex/domain/model/data_unit/data_unit.dart';
 import 'package:pokedex/foundation/utils/berry_data.dart';
 import 'package:pokedex/foundation/utils/pokemon_data.dart';
 

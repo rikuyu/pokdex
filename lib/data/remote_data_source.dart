@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
-import 'package:pokedex/domain/model/api_response.dart';
+import 'package:pokedex/domain/model/api/api_response.dart';
+import 'package:pokedex/domain/model/pokemon_detail/pokemon_detail.dart';
 import 'package:pokedex/foundation/utils/constants.dart';
 import 'package:pokedex/foundation/utils/utils.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
@@ -47,5 +48,11 @@ class RemoteDataSource {
     nextItemUrl = data.next;
     itemInitialCount++;
     return data.results;
+  }
+
+  Future<PokemonDetail> getPokemonDetail(int id) async {
+    final url = "${Constants.pokemonUrl}/$id";
+    final response = await dio.get(url);
+    return PokemonDetail.fromJson(response.data);
   }
 }

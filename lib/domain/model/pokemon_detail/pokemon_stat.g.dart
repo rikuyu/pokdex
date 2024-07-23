@@ -1,22 +1,21 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'pokemon_ability.dart';
+part of 'pokemon_stat.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$PokemonAbilityImpl _$$PokemonAbilityImplFromJson(Map<String, dynamic> json) =>
-    _$PokemonAbilityImpl(
+_$PokemonStatImpl _$$PokemonStatImplFromJson(Map<String, dynamic> json) =>
+    _$PokemonStatImpl(
       (json['base_stat'] as num).toInt(),
       Stat.fromJson(json['stat'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$$PokemonAbilityImplToJson(
-        _$PokemonAbilityImpl instance) =>
+Map<String, dynamic> _$$PokemonStatImplToJson(_$PokemonStatImpl instance) =>
     <String, dynamic>{
       'base_stat': instance.value,
-      'stat': instance.ability,
+      'stat': instance.stat,
     };
 
 _$StatImpl _$$StatImplFromJson(Map<String, dynamic> json) => _$StatImpl(

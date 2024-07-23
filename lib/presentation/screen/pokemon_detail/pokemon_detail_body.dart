@@ -2,8 +2,8 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:pokedex/domain/model/pokemon_detail/pokemon_detail.dart';
 import 'package:pokedex/foundation/pokedex_color.dart';
-import 'package:pokedex/foundation/utils/ability_data.dart';
 import 'package:pokedex/foundation/utils/constants.dart';
+import 'package:pokedex/foundation/utils/stat_data.dart';
 import 'package:pokedex/foundation/utils/type_data.dart';
 import 'package:pokedex/gen/assets.gen.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -78,7 +78,7 @@ class PokemonDetailBody extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 12),
-          Text(l10n.abilityLable,
+          Text(l10n.statLabel,
               style: const TextStyle(
                 fontSize: 20,
                 color: PokedexColor.black90Alpha,
@@ -89,8 +89,8 @@ class PokemonDetailBody extends StatelessWidget {
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
             itemBuilder: (_, i) {
-              final statValue = detail.abilities[i].value;
-              final statData = getAbilityData(detail.abilities[i].ability.name);
+              final statValue = detail.stats[i].value;
+              final statData = getStatData(detail.stats[i].stat.name);
               if (statData == null) return null;
               return Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -102,7 +102,7 @@ class PokemonDetailBody extends StatelessWidget {
               );
             },
             separatorBuilder: (_, __) => const SizedBox(height: 8),
-            itemCount: detail.abilities.length,
+            itemCount: detail.stats.length,
           )
         ],
       ),

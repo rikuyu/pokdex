@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-enum AbilityData {
+enum StatData {
   hp("HP", Color(0xff00c72b)),
   attack("こうげき", Color(0xfffc0000)),
   speed("すばやさ", Color(0xff00f0fc)),
@@ -11,12 +11,12 @@ enum AbilityData {
   final String nameJa;
   final Color color;
 
-  const AbilityData(this.nameJa, this.color);
+  const StatData(this.nameJa, this.color);
 }
 
-AbilityData? getAbilityData(String nameEn) {
-  AbilityData? data;
-  for (var value in AbilityData.values) {
+StatData? getStatData(String nameEn) {
+  StatData? data;
+  for (var value in StatData.values) {
     if (nameEn.replaceFirst("-", "") == value.name.toLowerCase()) data = value;
   }
   return data;

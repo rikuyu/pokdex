@@ -11,5 +11,5 @@
   "heightValue": "{h}m",
   "weightLabel": "重さ",
   "weightValue": "{w}kg",
-  "abilityLable": "能力値"
+  "statLabel": "能力値"
 }

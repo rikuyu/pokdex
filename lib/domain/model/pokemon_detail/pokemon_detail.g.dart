@@ -15,7 +15,7 @@ _$PokemonDetailImpl _$$PokemonDetailImplFromJson(Map<String, dynamic> json) =>
           .map((e) => PokemonType.fromJson(e as Map<String, dynamic>))
           .toList(),
       (json['stats'] as List<dynamic>)
-          .map((e) => PokemonAbility.fromJson(e as Map<String, dynamic>))
+          .map((e) => PokemonStat.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
@@ -25,5 +25,5 @@ Map<String, dynamic> _$$PokemonDetailImplToJson(_$PokemonDetailImpl instance) =>
       'height': instance.height,
       'weight': instance.weight,
       'types': instance.types,
-      'stats': instance.abilities,
+      'stats': instance.stats,
     };

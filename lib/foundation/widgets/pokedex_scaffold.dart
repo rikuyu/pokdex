@@ -11,11 +11,14 @@ class PokedexScaffold extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final appBarBackgroundColor = appBarColor ?? PokedexColor.primaryContainer;
+    final foregroundColor =
+        appBarBackgroundColor.computeLuminance() > 0.5 ? PokedexColor.black90Alpha : PokedexColor.onPrimaryContainer;
     return Scaffold(
       appBar: AppBar(
         title: Text(title),
-        backgroundColor: appBarColor ?? PokedexColor.primaryContainer,
-        foregroundColor: PokedexColor.onPrimaryContainer,
+        backgroundColor: appBarBackgroundColor,
+        foregroundColor: foregroundColor,
       ),
       backgroundColor: bodyColor,
       body: body,

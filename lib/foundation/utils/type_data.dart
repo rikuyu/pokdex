@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 enum TypeData {
   normal("ノーマル", Color(0xff949897)),
-  fighting("かくとう", Color(0xffc03028)),
+  fighting("かくとう", Color(0xfffa4439)),
   flying("ひこう", Color(0xff97b0e7)),
   poison("どく", Color(0xffa040a0)),
   ground("じめん", Color(0xffe0c068)),
@@ -15,7 +15,7 @@ enum TypeData {
   grass("くさ", Color(0xff78c850)),
   electric("でんき", Color(0xfff8d030)),
   psychic("エスパー", Color(0xfff85888)),
-  ice("こおり", Color(0xff98d8d8)),
+  ice("こおり", Color(0xff9ef0f0)),
   dragon("ドラゴン", Color(0xff066fb5)),
   dark("あく", Color(0xff705848)),
   fairy("フェアリー", Color(0xffee99ac)),

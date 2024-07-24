@@ -7,9 +7,9 @@
   "berryTitle": "きのみずかん",
   "item": "アイテム",
   "itemTitle": "アイテムずかん",
-  "heightLabel": "高さ",
+  "heightLabel": "たかさ",
   "heightValue": "{h}m",
-  "weightLabel": "重さ",
+  "weightLabel": "おもさ",
   "weightValue": "{w}kg",
-  "statLabel": "能力値"
+  "statLabel": "種族値"
 }

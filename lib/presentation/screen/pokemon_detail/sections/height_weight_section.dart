@@ -30,9 +30,10 @@ Widget _heightWeightBox(String label, String value) {
     child: Padding(
       padding: const EdgeInsets.all(12.0),
       child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [Text(label, style: labelStyle), const SizedBox(height: 8), Text(value, style: valueStyle)]),
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [Text(label, style: labelStyle), const SizedBox(height: 8), Text(value, style: valueStyle)],
+      ),
     ),
   );
 }

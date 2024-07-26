@@ -19,17 +19,21 @@ class PokemonDetailScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     AsyncValue<PokemonDetail> state = ref.watch(pokemonDetailStateProvider(id));
     return Container(
-        child: state.when(
-      error: (_, __) => const Center(child: Icon(Icons.error)),
-      loading: () => const Center(child: CircularProgressIndicator(color: PokedexColor.primaryContainer)),
-      data: (detail) {
-        final types = detail.types.map((t) => getTypeData(t.data.name)).toList();
-        return PokedexScaffold(
+      child: state.when(
+        error: (_, __) => const Center(child: Icon(Icons.error)),
+        loading: () => const Center(
+          child: CircularProgressIndicator(color: PokedexColor.primaryContainer),
+        ),
+        data: (detail) {
+          final types = detail.types.map((t) => getTypeData(t.data.name)).toList();
+          return PokedexScaffold(
             appBarColor: types.first.color,
             title: name,
             bodyColor: PokedexColor.backgroundColor,
-            body: PokemonDetailBody(detail));
-      },
-    ));
+            body: PokemonDetailBody(detail),
+          );
+        },
+      ),
+    );
   }
 }

@@ -15,10 +15,11 @@ Widget typesSection(List<TypeData> types) {
                 child: Text(
                   type.nameJa,
                   style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: type.color.computeLuminance() > 0.5
-                          ? PokedexColor.black90Alpha
-                          : PokedexColor.onPrimaryContainer),
+                    fontWeight: FontWeight.bold,
+                    color: type.color.computeLuminance() > 0.5
+                        ? PokedexColor.black90Alpha
+                        : PokedexColor.onPrimaryContainer,
+                  ),
                 ),
               ),
             ),

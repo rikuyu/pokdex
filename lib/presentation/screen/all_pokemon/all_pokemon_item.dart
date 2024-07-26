@@ -38,23 +38,27 @@ class AllPokemonItem extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Text("#$id",
-                    style: const TextStyle(
-                      color: PokedexColor.onPrimaryContainer,
-                      fontWeight: FontWeight.bold,
-                    )),
+                Text(
+                  "#$id",
+                  style: const TextStyle(
+                    color: PokedexColor.onPrimaryContainer,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
                 Expanded(
                     child: CachedNetworkImage(
                   imageUrl: image,
                   placeholder: (_, __) => Assets.monsterBall.svg(),
                   errorWidget: (_, __, ___) => const Icon(Icons.error),
                 )),
-                Text(getPokemonNameJa(id),
-                    style: const TextStyle(
-                      color: PokedexColor.black90Alpha,
-                      fontSize: 12.0,
-                      fontWeight: FontWeight.bold,
-                    )),
+                Text(
+                  getPokemonNameJa(id),
+                  style: const TextStyle(
+                    color: PokedexColor.black90Alpha,
+                    fontSize: 12.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
               ],
             ),
           )),

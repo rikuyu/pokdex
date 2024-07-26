@@ -12,14 +12,18 @@ class AllItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
-          border: Border.all(color: PokedexColor.black90Alpha),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(children: [
-            Text("#${index + 1}", style: const TextStyle(color: PokedexColor.black90Alpha)),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: PokedexColor.black90Alpha),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          children: [
+            Text(
+              "#${index + 1}",
+              style: const TextStyle(color: PokedexColor.black90Alpha),
+            ),
             Expanded(
               child: CachedNetworkImage(
                 imageUrl: imageUrl,
@@ -27,7 +31,9 @@ class AllItemWidget extends StatelessWidget {
                 errorWidget: (_, __, ___) => const Icon(Icons.error),
               ),
             ),
-          ]),
-        ));
+          ],
+        ),
+      ),
+    );
   }
 }

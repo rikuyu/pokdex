@@ -1,7 +1,6 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:pokedex/foundation/pokedex_color.dart';
-import 'package:pokedex/gen/assets.gen.dart';
+import 'package:pokedex/foundation/widgets/pokedex_unit_image.dart';
 
 class AllItemWidget extends StatelessWidget {
   const AllItemWidget(this.index, this.imageUrl, {super.key});
@@ -24,13 +23,7 @@ class AllItemWidget extends StatelessWidget {
               "#${index + 1}",
               style: const TextStyle(color: PokedexColor.black90Alpha),
             ),
-            Expanded(
-              child: CachedNetworkImage(
-                imageUrl: imageUrl,
-                placeholder: (_, __) => Assets.monsterBall.svg(),
-                errorWidget: (_, __, ___) => const Icon(Icons.error),
-              ),
-            ),
+            Expanded(child: pokedexUnitImage(imageUrl)),
           ],
         ),
       ),

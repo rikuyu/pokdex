@@ -35,11 +35,14 @@ class AllPokemonScreen extends ConsumerWidget {
                     crossAxisSpacing: 8,
                     childAspectRatio: 1,
                   ),
-                  delegate: SliverChildBuilderDelegate((_, i) {
-                    final pokemon = state.value?[i];
-                    if (pokemon == null) return null;
-                    return AllPokemonItem(pokemon);
-                  }, childCount: state.value?.length ?? 0),
+                  delegate: SliverChildBuilderDelegate(
+                    (_, i) {
+                      final pokemon = state.value?[i];
+                      if (pokemon == null) return null;
+                      return AllPokemonItem(pokemon);
+                    },
+                    childCount: state.value?.length ?? 0,
+                  ),
                 ),
               ),
               const SliverPadding(

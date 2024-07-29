@@ -38,7 +38,10 @@ class MainScreen extends StatelessWidget {
                       icon: Assets.pokemonIcon.svg(
                         width: 24.0,
                         height: 24.0,
-                        colorFilter: const ColorFilter.mode(PokedexColor.onPrimaryContainer, BlendMode.srcIn),
+                        colorFilter: const ColorFilter.mode(
+                          PokedexColor.onPrimaryContainer,
+                          BlendMode.srcIn,
+                        ),
                       ),
                       label: l10n.pokemon,
                     ),
@@ -46,7 +49,10 @@ class MainScreen extends StatelessWidget {
                       icon: Assets.berryIcon.svg(
                         width: 24.0,
                         height: 24.0,
-                        colorFilter: const ColorFilter.mode(PokedexColor.onPrimaryContainer, BlendMode.srcIn),
+                        colorFilter: const ColorFilter.mode(
+                          PokedexColor.onPrimaryContainer,
+                          BlendMode.srcIn,
+                        ),
                       ),
                       label: l10n.berry,
                     ),
@@ -54,7 +60,10 @@ class MainScreen extends StatelessWidget {
                       icon: Assets.itemIcon.svg(
                         width: 24.0,
                         height: 24.0,
-                        colorFilter: const ColorFilter.mode(PokedexColor.onPrimaryContainer, BlendMode.srcIn),
+                        colorFilter: const ColorFilter.mode(
+                          PokedexColor.onPrimaryContainer,
+                          BlendMode.srcIn,
+                        ),
                       ),
                       label: l10n.item,
                     ),

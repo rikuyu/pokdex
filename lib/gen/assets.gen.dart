@@ -16,13 +16,24 @@ class Assets {
   Assets._();
 
   static const SvgGenImage berryIcon = SvgGenImage('assets/berry_icon.svg');
+  static const SvgGenImage blackMonsterBall =
+      SvgGenImage('assets/black_monster_ball.svg');
+  static const SvgGenImage bottle = SvgGenImage('assets/bottle.svg');
   static const SvgGenImage itemIcon = SvgGenImage('assets/item_icon.svg');
   static const SvgGenImage monsterBall = SvgGenImage('assets/monster_ball.svg');
+  static const SvgGenImage myPage = SvgGenImage('assets/my_page.svg');
   static const SvgGenImage pokemonIcon = SvgGenImage('assets/pokemon_icon.svg');
 
   /// List of all assets
-  static List<SvgGenImage> get values =>
-      [berryIcon, itemIcon, monsterBall, pokemonIcon];
+  static List<SvgGenImage> get values => [
+        berryIcon,
+        blackMonsterBall,
+        bottle,
+        itemIcon,
+        monsterBall,
+        myPage,
+        pokemonIcon
+      ];
 }
 
 class SvgGenImage {

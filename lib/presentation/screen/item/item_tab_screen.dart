@@ -49,7 +49,7 @@ class ItemTabScreen extends StatelessWidget {
                   ),
                   Tab(
                     text: l10n.ballTitle,
-                    icon: Assets.berryIcon.svg(
+                    icon: Assets.blackMonsterBall.svg(
                       width: 24.0,
                       height: 24.0,
                       colorFilter: const ColorFilter.mode(
@@ -60,7 +60,7 @@ class ItemTabScreen extends StatelessWidget {
                   ),
                   Tab(
                     text: l10n.healTitle,
-                    icon: Assets.berryIcon.svg(
+                    icon: Assets.bottle.svg(
                       width: 24.0,
                       height: 24.0,
                       colorFilter: const ColorFilter.mode(
@@ -71,7 +71,7 @@ class ItemTabScreen extends StatelessWidget {
                   ),
                   Tab(
                     text: l10n.allItemTitle,
-                    icon: Assets.berryIcon.svg(
+                    icon: Assets.itemIcon.svg(
                       width: 24.0,
                       height: 24.0,
                       colorFilter: const ColorFilter.mode(

@@ -3,13 +3,16 @@
   "appTitle": "Pokedex",
   "pokemon": "ポケモン",
   "pokemonTitle": "ポケモンずかん",
-  "berry": "きのみ",
-  "berryTitle": "きのみずかん",
   "item": "アイテム",
   "itemTitle": "アイテムずかん",
+  "allItemTitle": "すべて",
+  "berryTitle": "きのみ",
+  "ballTitle": "ボール",
+  "healTitle": "かいふく",
   "heightLabel": "たかさ",
   "heightValue": "{h}m",
   "weightLabel": "おもさ",
   "weightValue": "{w}kg",
-  "statLabel": "種族値"
+  "statLabel": "種族値",
+  "myPageTitle": "マイページ"
 }

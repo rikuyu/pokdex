@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:pokedex/foundation/pokedex_color.dart';
-import 'package:pokedex/foundation/router/pokedex_rounter.gr.dart';
+import 'package:pokedex/foundation/router/pokedex_router.gr.dart';
 import 'package:pokedex/foundation/utils/constants.dart';
 import 'package:pokedex/foundation/utils/utils.dart';
 import 'package:pokedex/foundation/widgets/pokedex_unit_image.dart';

@@ -1,6 +1,5 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pokedex/foundation/pokedex_color.dart';
 import 'package:pokedex/foundation/utils/berry_data.dart';
@@ -15,10 +14,9 @@ class AllBerryScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final l10n = L10n.of(context);
     final berries = ref.watch(allBerryStateProvider);
     return PokedexScaffold(
-      title: l10n.berryTitle,
+      isShowAppBar: false,
       bodyColor: PokedexColor.backgroundColor,
       body: berries.when(
         loading: () => const Center(child: CircularProgressIndicator(color: PokedexColor.primaryContainer)),

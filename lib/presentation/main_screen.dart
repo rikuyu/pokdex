@@ -2,7 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:pokedex/foundation/pokedex_color.dart';
-import 'package:pokedex/foundation/router/pokedex_rounter.gr.dart';
+import 'package:pokedex/foundation/router/pokedex_router.gr.dart';
 import 'package:pokedex/gen/assets.gen.dart';
 
 @RoutePage()
@@ -13,9 +13,9 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return AutoTabsRouter(
       routes: const [
-        AllPokemonRoute(),
-        AllBerryRoute(),
-        AllItemRoute(),
+        AllPokemonRounter(),
+        ItemTabRoute(),
+        MyPageRoute(),
       ],
       transitionBuilder: (_, child, animation) {
         return FadeTransition(opacity: animation, child: child);
@@ -54,7 +54,7 @@ class MainScreen extends StatelessWidget {
                           BlendMode.srcIn,
                         ),
                       ),
-                      label: l10n.berry,
+                      label: l10n.item,
                     ),
                     BottomNavigationBarItem(
                       icon: Assets.itemIcon.svg(

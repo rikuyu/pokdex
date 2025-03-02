@@ -1,16 +1,29 @@
-# pokedex
+# 🐱 ポケモン図鑑
+## 🤖 画面
+| ポケモン図鑑 | ポケモン詳細 | きのみ図鑑 |
+| --------- | --------- | ------- |
+| <img width=400 src="https://github.com/user-attachments/assets/6ef1fc1c-f535-4687-a01d-06df575dab44" /> | <img width=400 src="https://github.com/user-attachments/assets/a2d8b50b-60e6-4d35-b5a6-51d8ce19e102" /> | <img width=400 src="https://github.com/user-attachments/assets/e18ad1c4-a2b8-4faf-8992-543ed493cbf7" /> |
 
-A new Flutter project.
 
-## Getting Started
+## 🔧 使用技術
+### 🎨 UI 関連
+- cached_network_image
+- flutter_svg
 
-This project is a starting point for a Flutter application.
+### 🌿 状態管理（Riverpod）
+- hooks_riverpod
+- riverpod_annotation 
 
-A few resources to get you started if this is your first Flutter project:
+### 🌍 ローカライゼーション（国際化）
+- flutter_localizations
+- intl
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### 🔀 ルーティング
+- auto_route
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 📦 モデル（シリアライズ・デシリアライズ）
+- freezed_annotation
+- json_annotation
+
+### 🔗 ネットワーク
+- dio
